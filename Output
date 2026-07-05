@@ -1,0 +1,54 @@
+ Step 1: Raw Data Sample ---
+
+   Hours_Studied  Attendance_Pct  Sleep_Hours  Extracurricular  Previous_Score  Exam_Score
+0       4.370861       87.926469     5.740532                0       59.464209   61.365467
+1       9.556429       81.443855     7.167604                0       60.077436   82.446805
+2       7.587945       72.381105     8.491783                0       67.282253   68.639837
+3       6.387926       92.551801     7.928900                0       74.408386   74.547486
+4       2.404168       87.389247     8.226245                0       80.963016   59.019611
+
+Missing values before cleaning:
+Hours_Studied       0
+Attendance_Pct      0
+Sleep_Hours         0
+Extracurricular     0
+Previous_Score     25
+Exam_Score          0
+dtype: int64
+
+--- Step 2: Cleaned Data Check ---
+
+Missing values after cleaning:
+Hours_Studied      0
+Attendance_Pct     0
+Sleep_Hours        0
+Extracurricular    0
+Previous_Score     0
+Exam_Score         0
+dtype: int64
+
+--- Step 3: Engineered Data Sample ---
+
+   Hours_Studied  Attendance_Pct  Study_Efficiency
+0       4.370861       87.926469          3.843144
+1       9.556429       81.443855          7.783124
+2       7.587945       72.381105          5.492239
+3       6.387926       92.551801          5.912141
+4       2.404168       87.389247          2.100984
+
+--- Step 6: Model Evaluation Metrics ---
+Mean Squared Error (MSE): 14.52
+Root Mean Squared Error (RMSE): 3.81 (On average, predictions err by 3.81 points)
+R-squared Score (R²): 0.90 (90.5% of variance explained by features)
+
+--- Feature Importances ---
+            Feature  Weight (Coefficient)
+0     Hours_Studied             12.395239
+1    Attendance_Pct              4.182289
+4    Previous_Score              2.366733
+3   Extracurricular             -0.018678
+2       Sleep_Hours             -0.250270
+5  Study_Efficiency             -1.126404
+c:\Users\subra\OneDrive\Desktop\project2\app.py:120: FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `y` variable to `hue` and set `legend=False` for the same effect.
